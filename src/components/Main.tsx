@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from '../styles/main'
-import Icon from 'react-native-vector-icons/FontAwesome6'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import {MinesInterface} from '../interfaces'
 import {Text, SafeAreaView, View, Button} from 'react-native'
 
@@ -17,7 +17,7 @@ function Main({setMode, setDifficult}: MainInterface) {
   return (
     <SafeAreaView style={style.SafeArea}>
       <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-        <Text style={style.Title}>Mines </Text>
+        <Text style={style.Title}>Mines</Text>
         <View
           style={{
             flexDirection: 'row',
@@ -26,14 +26,15 @@ function Main({setMode, setDifficult}: MainInterface) {
           }}>
           <Text
             style={{
-              transform: [{rotate: '-30deg'}],
-              marginRight: -7,
+              // transform: [{rotate: '-30deg'}],
+              marginRight: -16,
               marginBottom: 10,
-            }}>
-            <Icon name={'flag'} solid={true} size={20} color={'#ff4400'} />
+            }}
+            >
+            <Icon name={'flag-triangle'} size={25} color={'#ff4400'} />
           </Text>
           <Text style={{marginTop: 8}}>
-            <Icon name={'bomb'} size={20} color={'#000000'} />
+            <Icon name={'bomb'} size={25} color={'#000000'} />
           </Text>
         </View>
       </View>

@@ -3,7 +3,7 @@ import Style from '../styles/field'
 import {Text, View, TouchableHighlight} from 'react-native'
 import {MinesInterface, ItemsNumberInterface, PlaceInterface} from '../interfaces'
 import Place from './Place'
-import Icon from 'react-native-vector-icons/FontAwesome5'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { changeAction, getRemainMines, getTimer, surrender } from '../functions/field'
 
 interface FieldInterface {
@@ -70,10 +70,10 @@ function Field({
           <Icon
             name={
               action === 'marked'
-                ? 'flag'
+                ? 'flag-triangle'
                 : action === 'visible'
                 ? 'eye'
-                : 'question'
+                : 'map-marker-question-outline'
             }
             size={25}
             color={'white'}

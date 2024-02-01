@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from '../styles/place'
-import Icon from 'react-native-vector-icons/FontAwesome6'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import {
   MinesInterface,
   ItemsNumberInterface,
@@ -75,13 +75,13 @@ function Place({
         )
       }>
       {place.status === 'marked' ? (
-        <Icon name={'flag'} size={15} solid={true} color={'#b00'} />
+        <Icon name={'flag-triangle'} size={15} color={'#b00'} />
       ) : place.status === 'unknown' ? (
-        <Icon name={'question'} size={15} solid={true} color={'black'} />
+        <Icon name={'map-marker-question-outline'} size={15} color={'black'} />
       ) : place.status === 'visible' ? (
         <Text style={{color: getPlaceColor(place)}}>
           {convertFromPlaceValue(place.value) === 'mine' ? (
-            <Icon name={'bomb'} size={15} solid={true} color={'black'} />
+            <Icon name={'bomb'} size={15} color={'black'} />
           ) : convertFromPlaceValue(place.value) === 0 ? (
             ''
           ) : (

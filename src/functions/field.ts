@@ -3,7 +3,7 @@ import {
   ItemsNumberInterface,
   MinesInterface,
   PlaceInterface,
-} from '../../interfaces/mines'
+} from '../interfaces'
 
 interface FieldInterface {
   setMode: React.Dispatch<React.SetStateAction<MinesInterface['mode']>>
